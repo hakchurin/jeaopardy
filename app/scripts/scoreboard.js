@@ -6,7 +6,7 @@ import GameBoardQuestion from './data';
 // import Router from './router';
 //import Score from './score';
 import store from './store';
-
+import session from './session';
 
 
 const Scoreboard = React.createClass({
@@ -19,13 +19,11 @@ const Scoreboard = React.createClass({
   },
   componentDidMount: function(){
     store.session.on('change', () => {
-      console.log('CHANGED');
       this.setState({score: store.session.get('money')});
     });
     store.session.hasChanged();
   },
   render:function(){
-    console.log(this.state.score);
     return(
       <div>
       <div className= "scoreboard">

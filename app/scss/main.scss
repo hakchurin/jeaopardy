@@ -63,22 +63,24 @@ h3{
     }
 }
 
-//
-// .confirmationContainer {
-//     display: none;
-//     top: 0;
-//     position: fixed;
-//     height: 100vh;
-//     width: 100vw;
-//     background-color: rgba(0,0,0,0.8);
-//     .confirmContainer {
-//         border: 5px solid #d77e08;
-//         background-color: #446455;
-//         width: 45%;
-//         margin: 10% auto auto;
-//         h2 {
-//             text-align: center;
-//             font-size: 4rem;
-//             font-family: arial;
-//             color: #d77e08;
-//         }
+
+.confirmationContainer {
+    display: none;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+    .confirmContainer {
+        border: 5px solid #d77e08;
+        background-color: #446455;
+        width: 45%;
+        margin: 10% auto auto;
+        h2 {
+            text-align: center;
+            font-size: 4rem;
+            font-family: arial;
+            color: #d77e08;
+        }
+      }
+    }

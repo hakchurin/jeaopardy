@@ -173,11 +173,11 @@ export default GameView;
 
 
 
-
+//
 // categoryTitle = <p>{this.state.categories[0].title}</p>;
 // categoryValue= <p>{this.state.questions[0].value}</p>;
 // let categoryQuestions = this.state.categories[0].clues;
-
+//
 //   category = categoryQuestions.map((question,i) => {
 //    return <GameBoardQuestion showQuestion= {this.showQuestion} question= {question} key={i}/>;
 //  })

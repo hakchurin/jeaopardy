@@ -13,7 +13,6 @@ const router = (
   <Router history = {hashHistory}>
     <Route path="/" component={GameView}/>
     <Route path="/gameView" component={GameView}/>
-    <Route path="/gameView" component ={GameView2}/>
     <Route path ="/gameVew" component={Color}/>
         </Router>
 )
@@ -26,3 +25,4 @@ export default router;
 // <Route path="/GameBoardQuestion" component={GameBoardQuestionModal}/>
 
 // <route path="/gameView" component={GameQuestion2}/>
+// <Route path="/gameView" component ={GameView2}/>

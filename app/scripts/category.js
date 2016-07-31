@@ -2,65 +2,44 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {router, Route, hashHistory} from 'react-router';
 import GameBoardQuestion from './data';
+// import GameView from './gameView;'
 
 
-const Category = React.createClass({
 
-  render:function(){
-    let allQuestions= this.props.category.clues.map((question,i) =>{
-      return <GameBoardQuestion showQuestion={this.props.showQuestion} question={question} key={i}/>
+
+
+
+const GameViewList = React.createClass({
+  // getInitialState: function(){
+  //   return {
+  //     title: '',
+  //
+  //   }
+  // },
+  componentDidMount: function(){
+    // $.ajax({
+    //   type: 'GET',
+    //   url: `http://jservice.io/api/category?id=6`,
+    //   success: (data) => {
+    //   this.setState({title:data})
+    // }
+    // })
+  },
+  render: function(){
+    let questions = this.props.category.clues.map((clue,i,arr) => {
+      return < GameBoardQuestion key= {i} question= {clue} showQuestion = {this.props.showQuestion} />
     });
-
-
-    return(
-      <div id="title">
-        <h3>{this.props.category.title}</h3>
-        <ul>
-        {allQuestions}
-
-        </ul>
+    return (
+      <div>
+      <h3>{this.props.category.title} </h3>
+      <ul>
+        {questions}
+      </ul>
       </div>
     );
-  },
+  }
+});
 
+export default GameViewList;
 
-})
-
-export default Category;
-
-
-//
-// const GameViewList = React.createClass({
-//   getInitialState: function(){
-//     return {
-//       title: '',
-//
-//     }
-//   },
-//
-//   componentDidMount: function(){
-//     $.ajax({
-//       type: 'GET',
-//       url: `http://jservice.io/api/category?id=6`
-//       success: (data) =>{
-//       this.setState({title:data})
-//     }
-//     })
-//   },
-//   console.log(this.setState);
-//
-//   render: function(){
-//     let questions= this.state.data.map(function(game,i,arr){
-//       return <li key ={i} <p>GameView game= {game.title} </p></li>
-//     });
-//     return (
-//       <div>
-//       <ul>
-//         {questions}
-//       </ul>
-//       </div>
-//     );
-//   }
-// });
-//
-// export default GameViewList;
+// ={i}> <p>${clue.value}</p>
